@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>Heal</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        /* Estilização do cabeçalho */
+        .nav-wrapper {
+            background: linear-gradient(135deg, #007bff, #00d4ff);
+            padding: 0 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .nav-wrapper a.btn {
+            border-radius: 25px;
+            background-color: #00c6ff;
+            color: white;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-wrapper a.btn:hover {
+            background-color: #005cbf;
+        }
+
+        .nav-wrapper a.btn i {
+            font-size: 1.2rem;
+            margin-right: 5px;
+        }
+
+        /* Estilização da tabela */
+        .container {
+            margin-top: 50px;
+            max-width: 80%;
+            border-radius: 8px;
+            background: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table thead {
+            background-color: #007bff;
+            color: white;
+            text-align: left;
+        }
+
+        table thead th {
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        table tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        table tbody td {
+            padding: 10px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .btn-small {
+            border-radius: 50px;
+            padding: 5px 20px;
+            background-color: #ff4d4d;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-small:hover {
+            background-color: #ff1a1a;
+        }
+
+        .btn-small i {
+            font-size: 1rem;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/menu" class="brand-logo">Medicos</a>
+                <ul id="nav-mobile" class="right">
+                    <li><a href="/pacientes" class="waves-effect waves-light btn">
+                            <i class="material-icons left">format_list_bulleted</i>Lista de pacientes
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <table class="container">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Especialidade</th>
+                <th>Deletar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="medico : ${medicos}">
+                <td th:text="${medico.nome}"></td>
+                <td th:text="${medico.sobrenome}"></td>
+                <td th:text="${medico.especialidade}"></td>
+                <td>
+                    <a class="waves-effect waves-light btn-small" th:href="@{/deletarMedico/{id}(id=${medico.id})}">
+                        <i class="material-icons left">delete</i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+
+</html>

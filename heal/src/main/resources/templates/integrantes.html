@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>integrantes</title>
+    <!-- Link para a biblioteca Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to left, #d0e9f9, #ffffff); /* Gradiente suave de azul para branco */
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .quote {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            color: gold;
+            font-size: 2em;
+            margin: 0 5px;
+        }
+
+        /* Estilo para os ícones */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icons ion-icon {
+            color: #333;
+            font-size: 2em;
+            transition: color 0.5s;
+        }
+
+        .social-icons ion-icon:hover {
+            color: #86d6df;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Integrantes</h1>
+    <p>Conheça os participantes desse projeto!</p>
+
+    <div class="container">
+        <div class="card">
+            <img src="\assets\geovanna.jpg" alt="Geovanna Amorim">
+            <h2>Geovanna Amorim</h2>
+            <p>Responsável pelo Front-End</p>
+            <div class="social-icons">
+                <a href="https://github.com/GeehDV" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/geovanna-amorim-9834a7243/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="\assets\jessica.jpg" alt="Jessica Neves">
+            <h2>Jessica Neves</h2>
+            <p class="quote">Responsável pelo Back-End</p>
+            <div class="social-icons">
+                <a href="https://github.com/jehhxyz" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/jessica-neves-silva-0a8071287/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="\assets\pedro.jpg" alt="Pedro Henrique">
+            <h2>Pedro Henrique</h2>
+            <p class="quote">Responsável pelo Front-End</p>
+            <div class="social-icons">
+                <a href="https://github.com/PedroHenriques1" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/pedro-henrique-da-silva-4a18852a7/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
