@@ -64,4 +64,4 @@ Agendamento e controle de consultas
 **👩‍💻👨‍💻 Participantes do Projeto:**
 - [Geovanna Amorim](https://github.com/GeehDV) (Front-End)
 - [Jessica Neves](https://github.com/jehhxyz) (Back-End)
-- [Pedro Henrique](https://gtihub.com/PedroHenriques1) (Front-End)
+- [Pedro Henrique](https://gtihub.com/PedroHenriques) (Front-End)
